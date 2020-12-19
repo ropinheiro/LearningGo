@@ -4,6 +4,8 @@ Pre-requisites / other assumptions / my environment:
 - Windows 10
 - WSL2 installed with Ubuntu 20.04 running
 - Windows Terminal
+- Docker Desktop
+- Golang
 - Commands executed in Powershell, in the root folder.
 
 Root folder is .\02-kubernetes\
@@ -18,7 +20,7 @@ To edit files (e.g. *.md, *.go, Dockerfile) inside the console:
 
 To run Server code:
 
-> go run server.go
+> go run ./server/server.go
 
 Then, open a browser and navigate to:
 
@@ -27,12 +29,22 @@ Then, open a browser and navigate to:
 
 To build it into an executable (in Windows):
 
-> go build .
-> mv 02-kubernetes.exe server.exe
+> go build ./server
+> mv -Force ./server.exe ./server/server.exe
 
 To run it:
 
-> ./server
+> ./server/server
+
+-----------------------------------------------------------------
+
+To containerize it:
+
+> docker build . -t ropinheiro/kubernetes-tutorial
+
+Check it:
+
+> docker images
 
 -----------------------------------------------------------------
 Reference:
