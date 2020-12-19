@@ -13,20 +13,19 @@ To run Server code:
 
 Then, open a browser and navigate to:
 
-> http://localhost:8080
+> http://localhost:8080 (will say "not found")
+> http://localhost:8080/hello (will say "hello")
 
-> http://localhost:8080/hello
+To build it into an executable (in Windows):
 
------------------------------------------------------------------
+> go build .
+> mv 02-kubernetes.exe server.exe
 
-To prepare (if not done previously) the Quote code: 
+To run it:
 
-> go mod init quote
-
-Then, to run it:
-
-> go run quote.go
+> ./server
 
 -----------------------------------------------------------------
-Reference: https://golang.org/doc/tutorial/getting-started
+Reference:
+https://medium.com/swlh/zero-to-kubernetes-in-5-mins-dcff81b4508
 -----------------------------------------------------------------
