@@ -1,7 +1,16 @@
 -----------------------------------------------------------------
 
-To edit this file (and the *.go files) inside Powershell, you
-must have WSL2 installed and properly running, then, e.g.:
+Pre-requisites / other assumptions / my environment:
+- Windows 10
+- WSL2 installed with Ubuntu 20.04 running
+- Windows Terminal
+- Commands executed in Powershell, in the root folder.
+
+Root folder is .\02-kubernetes\
+
+-----------------------------------------------------------------
+
+To edit files (e.g. *.md, *.go, Dockerfile) inside the console:
 
 > bash -c "pico README.md"
 
