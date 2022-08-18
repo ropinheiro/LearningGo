@@ -26,6 +26,9 @@ func main() {
     fmt.Println("Before swap: ", a, b)
     c, d := swap("hello", "world")
     fmt.Println("After swap: ", c, d)
+
+    fmt.Print("Splitting 17 in parts: ")
+    fmt.Println(split(17))
 }
 
 func add(x, y int) int {
@@ -39,4 +42,10 @@ func factorial(n int) int {
 
 func swap(x, y string) (string, string) {
 	return y, x
+}
+
+func split(sum int) (x, y int) {
+	x = sum * 4 / 9
+	y = sum - x
+	return // "naked" return (avoid usage)
 }
