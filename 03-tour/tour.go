@@ -17,4 +17,16 @@ func main() {
     
    	fmt.Printf("Now you have %g problems.\n", math.Sqrt(7))
     fmt.Println("The value of Pi is", math.Pi)
+
+    fmt.Println("The sum of 3 with 7 is", add(3, 7))
+    fmt.Println("The factorial of 5 is", factorial(5))
+}
+
+func add(x int, y int) int {
+	return x + y
+}
+
+func factorial(n int) int {
+   if (n == 1) { return 1 }
+   return n * factorial(n-1)
 }
