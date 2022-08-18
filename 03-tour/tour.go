@@ -21,10 +21,10 @@ func main() {
     fmt.Println("The sum of 3 with 7 is", add(3, 7))
     fmt.Println("The factorial of 5 is", factorial(5))
 
-    a := "hello"
-    b := "world"
+    var a string = "hello"
+    var b string = "world"
     fmt.Println("Before swap: ", a, b)
-    c, d := swap("hello", "world")
+    var c, d = swap("hello", "world")
     fmt.Println("After swap: ", c, d)
 
     fmt.Print("Splitting 17 in parts: ")
