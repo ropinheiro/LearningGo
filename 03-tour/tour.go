@@ -22,7 +22,7 @@ func main() {
     fmt.Println("The factorial of 5 is", factorial(5))
 }
 
-func add(x int, y int) int {
+func add(x, y int) int {
 	return x + y
 }
 
