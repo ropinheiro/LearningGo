@@ -20,6 +20,12 @@ func main() {
 
     fmt.Println("The sum of 3 with 7 is", add(3, 7))
     fmt.Println("The factorial of 5 is", factorial(5))
+
+    a := "hello"
+    b := "world"
+    fmt.Println("Before swap: ", a, b)
+    c, d := swap("hello", "world")
+    fmt.Println("After swap: ", c, d)
 }
 
 func add(x, y int) int {
@@ -29,4 +35,8 @@ func add(x, y int) int {
 func factorial(n int) int {
    if (n == 1) { return 1 }
    return n * factorial(n-1)
+}
+
+func swap(x, y string) (string, string) {
+	return y, x
 }
