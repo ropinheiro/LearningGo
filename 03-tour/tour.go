@@ -41,6 +41,9 @@ func main() {
     fmt.Println("\nShowing off type conversions...")
     showOffTypeConversion()
 
+    fmt.Println("\nShowing off type inferences...")
+    showOffTypeInference()
+
     fmt.Print("\n")
   }
 
@@ -93,4 +96,13 @@ func showOffTypeConversion() {
   fmt.Printf("> Value for X: %v and Y: %v\n", x, y)
   fmt.Printf("> Value for F: %v\n", f)
   fmt.Printf("> Value for Z: %v\n", z)
+}
+
+func showOffTypeInference() {
+  a := 42 // int
+  fmt.Printf("> Value A = %v is of type: %T\n", a, a)
+  b := 42.1 // float64
+  fmt.Printf("> Value B = %v is of type: %T\n", b, b)
+  c := "XPTO" // string
+  fmt.Printf("> Value C = %v is of type: %T\n", c, c)
 }
