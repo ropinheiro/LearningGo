@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"math"
+	"math/cmplx"
 	"math/rand"
 	"time"
 )
@@ -31,6 +32,9 @@ func main() {
     fmt.Print("> Splitting 17 in parts: ")
     fmt.Println(split(17))
 
+    fmt.Println("\nShowing off types...")
+    showOffTypes()
+
     fmt.Print("\n")
   }
 
@@ -52,4 +56,15 @@ func split(sum int) (x, y int) {
 	x = sum * 4 / 9
 	y = sum - x
 	return // "naked" return (avoid usage)
+}
+
+func showOffTypes() {
+  var (
+    ToBe   bool       = false
+    MaxInt uint64     = 1<<64 - 1
+    z      complex128 = cmplx.Sqrt(-5 + 12i)
+  )
+ 	fmt.Printf("> Type: %T Value: %v\n", ToBe, ToBe)
+	fmt.Printf("> Type: %T Value: %v\n", MaxInt, MaxInt)
+	fmt.Printf("> Type: %T Value: %v\n", z, z)
 }
