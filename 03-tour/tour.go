@@ -38,6 +38,9 @@ func main() {
     fmt.Println("\nShowing off zero values for unitialized variables...")
     showOffZeroValues()
 
+    fmt.Println("\nShowing off type conversions...")
+    showOffTypeConversion()
+
     fmt.Print("\n")
   }
 
@@ -81,4 +84,13 @@ func showOffZeroValues() {
   fmt.Printf("> Zero value for float64: %v\n", f)
   fmt.Printf("> Zero value for bool: %v\n", b)
   fmt.Printf("> Zero value for string: %q\n", s)
+}
+
+func showOffTypeConversion() {
+  var x, y int = 3, 4
+	var f float64 = math.Sqrt(float64(x*x + y*y))
+	var z uint = uint(f)
+  fmt.Printf("> Value for X: %v and Y: %v\n", x, y)
+  fmt.Printf("> Value for F: %v\n", f)
+  fmt.Printf("> Value for Z: %v\n", z)
 }
