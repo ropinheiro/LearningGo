@@ -32,7 +32,8 @@ func main() {
 }
 
 func add(x, y int) int {
-	return x + y
+  k := 1 // Assignment with implicit type.
+	return x + y + (k - k)
 }
 
 func factorial(n int) int {
