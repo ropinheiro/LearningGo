@@ -35,6 +35,9 @@ func main() {
     fmt.Println("\nShowing off types...")
     showOffTypes()
 
+    fmt.Println("\nShowing off zero values for unitialized variables...")
+    showOffZeroValues()
+
     fmt.Print("\n")
   }
 
@@ -67,4 +70,15 @@ func showOffTypes() {
   fmt.Printf("> Type: %T Value: %v\n", ToBe, ToBe)
   fmt.Printf("> Type: %T Value: %v\n", MaxInt, MaxInt)
   fmt.Printf("> Type: %T Value: %v\n", z, z)
+}
+
+func showOffZeroValues() {
+  var i int
+  var f float64
+  var b bool
+  var s string
+  fmt.Printf("> Zero value for int: %v\n", i)
+  fmt.Printf("> Zero value for float64: %v\n", f)
+  fmt.Printf("> Zero value for bool: %v\n", b)
+  fmt.Printf("> Zero value for string: %q\n", s)
 }
