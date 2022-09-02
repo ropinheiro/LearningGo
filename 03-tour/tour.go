@@ -88,8 +88,8 @@ func showOffZeroValues() {
 
 func showOffTypeConversion() {
   var x, y int = 3, 4
-	var f float64 = math.Sqrt(float64(x*x + y*y))
-	var z uint = uint(f)
+  var f float64 = math.Sqrt(float64(x*x + y*y))
+  var z uint = uint(f)
   fmt.Printf("> Value for X: %v and Y: %v\n", x, y)
   fmt.Printf("> Value for F: %v\n", f)
   fmt.Printf("> Value for Z: %v\n", z)
