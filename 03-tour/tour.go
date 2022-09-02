@@ -111,6 +111,17 @@ func showOffTypeInference() {
 }
 
 const Pi = 3.14
+const (
+  // Create a huge number by shifting a 1 bit left 100 places.
+  // In other words, the binary number that is 1 followed by 100 zeroes.
+  Big = 1 << 100
+  // Shift it right again 99 places, so we end up with 1<<1, or 2.
+  Small = Big >> 99
+)
+func needInt(x int) int { return x*10 + 1 }
+func needFloat(x float64) float64 {
+  return x * 0.1
+}
 func showOffConstants() {
   const HelloWorld = "Hello World"
   fmt.Printf("> I say %q!\n", HelloWorld)
@@ -118,4 +129,10 @@ func showOffConstants() {
 
   const Truth = false
   fmt.Printf("> This sentence is %v.\n", Truth)
+
+  // Numeric constants
+  fmt.Printf("> needInt(Small): %v.\n", needInt(Small))
+  // fmt.Printf("> needInt(Big): %v.\n", needInt(Big)) // this gives an error, number is too big for an int type
+  fmt.Printf("> needFloat(Small): %v.\n", needFloat(Small))
+  fmt.Printf("> needFloat(Big): %v.\n", needFloat(Big))
 }
