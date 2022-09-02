@@ -44,6 +44,9 @@ func main() {
     fmt.Println("\nShowing off type inferences...")
     showOffTypeInference()
 
+    fmt.Println("\nShowing off constants usage...")
+    showOffConstants()
+
     fmt.Print("\n")
   }
 
@@ -105,4 +108,14 @@ func showOffTypeInference() {
   fmt.Printf("> Value B = %v is of type: %T\n", b, b)
   c := "XPTO" // string
   fmt.Printf("> Value C = %v is of type: %T\n", c, c)
+}
+
+const Pi = 3.14
+func showOffConstants() {
+  const HelloWorld = "Hello World"
+  fmt.Printf("> I say %q!\n", HelloWorld)
+  fmt.Printf("> And Pi is around: %v.\n", Pi)
+
+  const Truth = false
+  fmt.Printf("> This sentence is %v.\n", Truth)
 }
