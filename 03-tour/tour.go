@@ -8,28 +8,31 @@ import (
 )
 
 func main() {
-    fmt.Println("Hello, Tour!")
+    fmt.Print("\n")
+    fmt.Println(" ====================")
+    fmt.Println("| Hello, Tour of Go! |")
+    fmt.Println(" ====================")
 
-  	fmt.Println("The time is", time.Now())
-
+    fmt.Println("\nPlaying with math, time, rand...")
+  	fmt.Println("> The time is", time.Now())
     rand.Seed(int64(time.Now().Nanosecond()))
-    fmt.Println("My favorite number is", rand.Intn(10))
-    
-   	fmt.Printf("Now you have %g problems.\n", math.Sqrt(7))
-    fmt.Println("The value of Pi is", math.Pi)
+    fmt.Println("> My favorite number is", rand.Intn(10))
+   	fmt.Printf("> Now you have %g problems.\n", math.Sqrt(7))
+    fmt.Println("> The value of Pi is", math.Pi)
+    fmt.Println("> The sum of 3 with 7 is", add(3, 7))
+    fmt.Println("> The factorial of 5 is", factorial(5))
 
-    fmt.Println("The sum of 3 with 7 is", add(3, 7))
-    fmt.Println("The factorial of 5 is", factorial(5))
-
+    fmt.Println("\nPlaying with swaps and splits...")
     var a string = "hello"
     var b string = "world"
-    fmt.Println("Before swap: ", a, b)
+    fmt.Println("> Before swap: ", a, b)
     var c, d = swap("hello", "world")
-    fmt.Println("After swap: ", c, d)
-
-    fmt.Print("Splitting 17 in parts: ")
+    fmt.Println("> After swap: ", c, d)
+    fmt.Print("> Splitting 17 in parts: ")
     fmt.Println(split(17))
-}
+
+    fmt.Print("\n")
+  }
 
 func add(x, y int) int {
   k := 1 // Assignment with implicit type.
